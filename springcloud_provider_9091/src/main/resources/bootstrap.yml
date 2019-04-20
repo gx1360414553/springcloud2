@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    config:
+      label: master
+      name: application
+      profile: provider2
+      uri: http://localhost:10086/
+  #连接rabbitmq作为事件总线的消息中间件
+  rabbitmq:
+    host: 192.168.26.130
+    username: admin
+    password: admin
+    port: 5672
+    virtual-host: /admin
+#暴露所有节点（其中包含bus-refresh，该节点就是刷新配置文件）
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ['*']

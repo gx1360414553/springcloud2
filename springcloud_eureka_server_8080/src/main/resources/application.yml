@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+eureka:
+  instance:
+    hostname: www.eureka2.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://www.eureka1.com:8081/eureka/
+spring:
+  application:
+    name: eureka-server

@@ -1,0 +1,10 @@
+server:
+  port: 6060
+spring:
+  application:
+    name: consumer-ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.eureka1.com:8080/eureka/,http://www.eureka2.com:8081/eureka/
+    register-with-eureka: true
