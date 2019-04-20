@@ -7,4 +7,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://www.eureka1.com:8080/eureka/,http://www.eureka2.com:8081/eureka/
-    register-with-eureka: true
+    #服务的消费者可以配置该属性,表示该属性不用注册到eureka上
+    register-with-eureka: false
