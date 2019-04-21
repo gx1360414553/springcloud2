@@ -3,7 +3,11 @@ server:
 spring:
   cloud:
     config:
+      #gitup上配置文件的名称没有后缀
       name: application
+      #配置文件中的分区名字
       profile: default
+      #分布式配置管理中心的地址(config server工程地址)
       uri: http://localhost:10086/
+      #使用github上的分支
       label: master

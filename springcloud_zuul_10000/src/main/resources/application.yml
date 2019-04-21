@@ -8,10 +8,12 @@ eureka:
 spring:
   application:
     name: zuul10000
+#配置zuul的路由匹配规则
 zuul:
   routes:
     test1:
       path: /test1/**
+#可小写CONSUMER-FEIGN
       serviceId: consumer-feign
     test2:
       path: /test2/**

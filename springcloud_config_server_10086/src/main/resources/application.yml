@@ -8,3 +8,6 @@ spring:
       server:
         git:
           uri: https://github.com/gx1360414553/provider_config.git
+#          私有空间
+#          username:
+#          password:
