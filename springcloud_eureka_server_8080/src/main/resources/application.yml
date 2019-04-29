@@ -1,14 +1,20 @@
 server:
   port: 8080
-
 eureka:
   instance:
-    hostname: www.eureka2.com
+    #配置当前注册中心得主机名
+    hostname: www.eureka1.com
   client:
+    #当前的eureka注册中心本身也是一个服务,默认注册中心会将自己注册到eureka上
+    #配置这个属性表示,不要将本身注册到eureka上
     register-with-eureka: false
+    #作为注册中心,不用去注册中心获取别的服务
     fetch-registry: false
+    #注册中心的地址
     service-url:
-      defaultZone: http://www.eureka1.com:8081/eureka/
+      defaultZone: http://www.eureka2.com:8081/eureka/
+  server:
+    enable-self-preservation: true
 spring:
   application:
     name: eureka-server

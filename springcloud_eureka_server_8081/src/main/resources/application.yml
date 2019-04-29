@@ -3,9 +3,9 @@ server:
 
 eureka:
   instance:
-    hostname: www.eureka1.com
+    hostname: www.eureka2.com
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://www.eureka2.com:8080/eureka/
+      defaultZone: http://www.eureka1.com:8080/eureka/
